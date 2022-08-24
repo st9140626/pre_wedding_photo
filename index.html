@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>River & Shelly Wedding</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Barlow:400,500,700");
+    .container {
+      margin: auto;
+      padding: 0 .5rem;
+      max-width: 71.25rem;
+      width: 100%;
+    }
+
+    .grid {
+      display: flex;
+      flex-direction: column;
+      flex-flow: row wrap;
+    }
+    .grid > [class*=column-] {
+      display: block;
+    }
+
+    .first {
+      order: -1;
+    }
+
+    .last {
+      order: 12;
+    }
+
+    .align-top {
+      align-items: start;
+    }
+
+    .align-center {
+      align-items: center;
+    }
+
+    .align-bottom {
+      align-items: end;
+    }
+
+    .column-xs-1 {
+      flex-basis: 8.3333333333%;
+      max-width: 8.3333333333%;
+    }
+
+    .column-xs-2 {
+      flex-basis: 16.6666666667%;
+      max-width: 16.6666666667%;
+    }
+
+    .column-xs-3 {
+      flex-basis: 25%;
+      max-width: 25%;
+    }
+
+    .column-xs-4 {
+      flex-basis: 33.3333333333%;
+      max-width: 33.3333333333%;
+    }
+
+    .column-xs-5 {
+      flex-basis: 41.6666666667%;
+      max-width: 41.6666666667%;
+    }
+
+    .column-xs-6 {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+
+    .column-xs-7 {
+      flex-basis: 58.3333333333%;
+      max-width: 58.3333333333%;
+    }
+
+    .column-xs-8 {
+      flex-basis: 66.6666666667%;
+      max-width: 66.6666666667%;
+    }
+
+    .column-xs-9 {
+      flex-basis: 75%;
+      max-width: 75%;
+    }
+
+    .column-xs-10 {
+      flex-basis: 83.3333333333%;
+      max-width: 83.3333333333%;
+    }
+
+    .column-xs-11 {
+      flex-basis: 91.6666666667%;
+      max-width: 91.6666666667%;
+    }
+
+    .column-xs-12 {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+
+    @media (min-width: 48rem) {
+      .column-sm-1 {
+        flex-basis: 8.3333333333%;
+        max-width: 8.3333333333%;
+      }
+
+      .column-sm-2 {
+        flex-basis: 16.6666666667%;
+        max-width: 16.6666666667%;
+      }
+
+      .column-sm-3 {
+        flex-basis: 25%;
+        max-width: 25%;
+      }
+
+      .column-sm-4 {
+        flex-basis: 33.3333333333%;
+        max-width: 33.3333333333%;
+      }
+
+      .column-sm-5 {
+        flex-basis: 41.6666666667%;
+        max-width: 41.6666666667%;
+      }
+
+      .column-sm-6 {
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+
+      .column-sm-7 {
+        flex-basis: 58.3333333333%;
+        max-width: 58.3333333333%;
+      }
+
+      .column-sm-8 {
+        flex-basis: 66.6666666667%;
+        max-width: 66.6666666667%;
+      }
+
+      .column-sm-9 {
+        flex-basis: 75%;
+        max-width: 75%;
+      }
+
+      .column-sm-10 {
+        flex-basis: 83.3333333333%;
+        max-width: 83.3333333333%;
+      }
+
+      .column-sm-11 {
+        flex-basis: 91.6666666667%;
+        max-width: 91.6666666667%;
+      }
+
+      .column-sm-12 {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+    @media (min-width: 62rem) {
+      .column-md-1 {
+        flex-basis: 8.3333333333%;
+        max-width: 8.3333333333%;
+      }
+
+      .column-md-2 {
+        flex-basis: 16.6666666667%;
+        max-width: 16.6666666667%;
+      }
+
+      .column-md-3 {
+        flex-basis: 25%;
+        max-width: 25%;
+      }
+
+      .column-md-4 {
+        flex-basis: 33.3333333333%;
+        max-width: 33.3333333333%;
+      }
+
+      .column-md-5 {
+        flex-basis: 41.6666666667%;
+        max-width: 41.6666666667%;
+      }
+
+      .column-md-6 {
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+
+      .column-md-7 {
+        flex-basis: 58.3333333333%;
+        max-width: 58.3333333333%;
+      }
+
+      .column-md-8 {
+        flex-basis: 66.6666666667%;
+        max-width: 66.6666666667%;
+      }
+
+      .column-md-9 {
+        flex-basis: 75%;
+        max-width: 75%;
+      }
+
+      .column-md-10 {
+        flex-basis: 83.3333333333%;
+        max-width: 83.3333333333%;
+      }
+
+      .column-md-11 {
+        flex-basis: 91.6666666667%;
+        max-width: 91.6666666667%;
+      }
+
+      .column-md-12 {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+    @media (min-width: 75rem) {
+      .column-lg-1 {
+        flex-basis: 8.3333333333%;
+        max-width: 8.3333333333%;
+      }
+
+      .column-lg-2 {
+        flex-basis: 16.6666666667%;
+        max-width: 16.6666666667%;
+      }
+
+      .column-lg-3 {
+        flex-basis: 25%;
+        max-width: 25%;
+      }
+
+      .column-lg-4 {
+        flex-basis: 33.3333333333%;
+        max-width: 33.3333333333%;
+      }
+
+      .column-lg-5 {
+        flex-basis: 41.6666666667%;
+        max-width: 41.6666666667%;
+      }
+
+      .column-lg-6 {
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+
+      .column-lg-7 {
+        flex-basis: 58.3333333333%;
+        max-width: 58.3333333333%;
+      }
+
+      .column-lg-8 {
+        flex-basis: 66.6666666667%;
+        max-width: 66.6666666667%;
+      }
+
+      .column-lg-9 {
+        flex-basis: 75%;
+        max-width: 75%;
+      }
+
+      .column-lg-10 {
+        flex-basis: 83.3333333333%;
+        max-width: 83.3333333333%;
+      }
+
+      .column-lg-11 {
+        flex-basis: 91.6666666667%;
+        max-width: 91.6666666667%;
+      }
+
+      .column-lg-12 {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+    @supports (display: grid) {
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+      }
+      .grid > [class*=column-] {
+        margin: 0;
+        max-width: 100%;
+      }
+
+      .column-xs-1 {
+        grid-column-start: span 1;
+        grid-column-end: span 1;
+      }
+
+      .column-xs-2 {
+        grid-column-start: span 2;
+        grid-column-end: span 2;
+      }
+
+      .column-xs-3 {
+        grid-column-start: span 3;
+        grid-column-end: span 3;
+      }
+
+      .column-xs-4 {
+        grid-column-start: span 4;
+        grid-column-end: span 4;
+      }
+
+      .column-xs-5 {
+        grid-column-start: span 5;
+        grid-column-end: span 5;
+      }
+
+      .column-xs-6 {
+        grid-column-start: span 6;
+        grid-column-end: span 6;
+      }
+
+      .column-xs-7 {
+        grid-column-start: span 7;
+        grid-column-end: span 7;
+      }
+
+      .column-xs-8 {
+        grid-column-start: span 8;
+        grid-column-end: span 8;
+      }
+
+      .column-xs-9 {
+        grid-column-start: span 9;
+        grid-column-end: span 9;
+      }
+
+      .column-xs-10 {
+        grid-column-start: span 10;
+        grid-column-end: span 10;
+      }
+
+      .column-xs-11 {
+        grid-column-start: span 11;
+        grid-column-end: span 11;
+      }
+
+      .column-xs-12 {
+        grid-column-start: span 12;
+        grid-column-end: span 12;
+      }
+
+      @media (min-width: 48rem) {
+        .column-sm-1 {
+          grid-column-start: span 1;
+          grid-column-end: span 1;
+        }
+
+        .column-sm-2 {
+          grid-column-start: span 2;
+          grid-column-end: span 2;
+        }
+
+        .column-sm-3 {
+          grid-column-start: span 3;
+          grid-column-end: span 3;
+        }
+
+        .column-sm-4 {
+          grid-column-start: span 4;
+          grid-column-end: span 4;
+        }
+
+        .column-sm-5 {
+          grid-column-start: span 5;
+          grid-column-end: span 5;
+        }
+
+        .column-sm-6 {
+          grid-column-start: span 6;
+          grid-column-end: span 6;
+        }
+
+        .column-sm-7 {
+          grid-column-start: span 7;
+          grid-column-end: span 7;
+        }
+
+        .column-sm-8 {
+          grid-column-start: span 8;
+          grid-column-end: span 8;
+        }
+
+        .column-sm-9 {
+          grid-column-start: span 9;
+          grid-column-end: span 9;
+        }
+
+        .column-sm-10 {
+          grid-column-start: span 10;
+          grid-column-end: span 10;
+        }
+
+        .column-sm-11 {
+          grid-column-start: span 11;
+          grid-column-end: span 11;
+        }
+
+        .column-sm-12 {
+          grid-column-start: span 12;
+          grid-column-end: span 12;
+        }
+      }
+      @media (min-width: 62rem) {
+        .column-md-1 {
+          grid-column-start: span 1;
+          grid-column-end: span 1;
+        }
+
+        .column-md-2 {
+          grid-column-start: span 2;
+          grid-column-end: span 2;
+        }
+
+        .column-md-3 {
+          grid-column-start: span 3;
+          grid-column-end: span 3;
+        }
+
+        .column-md-4 {
+          grid-column-start: span 4;
+          grid-column-end: span 4;
+        }
+
+        .column-md-5 {
+          grid-column-start: span 5;
+          grid-column-end: span 5;
+        }
+
+        .column-md-6 {
+          grid-column-start: span 6;
+          grid-column-end: span 6;
+        }
+
+        .column-md-7 {
+          grid-column-start: span 7;
+          grid-column-end: span 7;
+        }
+
+        .column-md-8 {
+          grid-column-start: span 8;
+          grid-column-end: span 8;
+        }
+
+        .column-md-9 {
+          grid-column-start: span 9;
+          grid-column-end: span 9;
+        }
+
+        .column-md-10 {
+          grid-column-start: span 10;
+          grid-column-end: span 10;
+        }
+
+        .column-md-11 {
+          grid-column-start: span 11;
+          grid-column-end: span 11;
+        }
+
+        .column-md-12 {
+          grid-column-start: span 12;
+          grid-column-end: span 12;
+        }
+      }
+      @media (min-width: 75rem) {
+        .column-lg-1 {
+          grid-column-start: span 1;
+          grid-column-end: span 1;
+        }
+
+        .column-lg-2 {
+          grid-column-start: span 2;
+          grid-column-end: span 2;
+        }
+
+        .column-lg-3 {
+          grid-column-start: span 3;
+          grid-column-end: span 3;
+        }
+
+        .column-lg-4 {
+          grid-column-start: span 4;
+          grid-column-end: span 4;
+        }
+
+        .column-lg-5 {
+          grid-column-start: span 5;
+          grid-column-end: span 5;
+        }
+
+        .column-lg-6 {
+          grid-column-start: span 6;
+          grid-column-end: span 6;
+        }
+
+        .column-lg-7 {
+          grid-column-start: span 7;
+          grid-column-end: span 7;
+        }
+
+        .column-lg-8 {
+          grid-column-start: span 8;
+          grid-column-end: span 8;
+        }
+
+        .column-lg-9 {
+          grid-column-start: span 9;
+          grid-column-end: span 9;
+        }
+
+        .column-lg-10 {
+          grid-column-start: span 10;
+          grid-column-end: span 10;
+        }
+
+        .column-lg-11 {
+          grid-column-start: span 11;
+          grid-column-end: span 11;
+        }
+
+        .column-lg-12 {
+          grid-column-start: span 12;
+          grid-column-end: span 12;
+        }
+      }
+    }
+    * {
+      box-sizing: border-box;
+    }
+    *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Barlow", sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.5;
+      color: #787878;
+      background: #fff;
+      text-rendering: optimizeLegibility;
+    }
+
+    ul li {
+      margin: 0 1.5rem 0 0;
+    }
+
+    a {
+      color: #787878;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    a:hover {
+      color: #2e2e2e;
+    }
+    a.active {
+      color: #2e2e2e;
+    }
+
+    nav {
+      padding: 2.5rem 0 2.5rem 0;
+    }
+    nav ul {
+      display: flex;
+      justify-content: flex-start;
+    }
+    nav li {
+      font-size: 1.25rem;
+    }
+    nav li:nth-child(2) {
+      margin: 0;
+    }
+
+    #highlight {
+      color: #ea8478;
+      font-size: 1.25rem;
+    }
+
+    .gallery {
+      padding: 0 0 1rem 0;
+    }
+
+    .img-container {
+      width: 100%;
+      height: 500px;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .img-container:hover .img-content-hover {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+      height: 500px;
+      -o-object-fit: cover;
+        object-fit: cover;
+      transform: scale(1);
+      transition: all 0.3s ease-in-out;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    .img-content-hover {
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      white-space: nowrap;
+      display: none;
+      padding: 1rem;
+      background: #fff;
+      font-weight: 400;
+      margin-top: 1.25rem;
+      margin-left: -2rem;
+    }
+
+    .title {
+      color: #2e2e2e;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .category {
+      font-size: 1rem;
+      color: #787878;
+    }
+
+    .img-content {
+      display: none;
+    }
+    .social li {
+      display: inline-block;
+    }
+    .h_650, .h_650_image {
+      height: 650px;
+    }
+    .h_600, .h_600_image {
+      height: 600px;
+    }
+    .h_400, .h_400_image {
+      height: 400px;
+    }
+    
+    @supports (display: grid) {
+      .gallery .grid {
+        grid-gap: 1rem;
+      }
+    }
+    @media (min-width: 62rem) {
+      nav ul {
+        justify-content: flex-end;
+      }
+    }
+    @media (max-width: 1024px) {
+      img:hover {
+        transform: none;
+      }
+
+      .img-container {
+        margin: 0%;
+        height: 100%;
+      }
+      .img-container.horizon > img {
+        height: auto;
+      }
+      .img-container:hover .img-content-hover {
+        display: none;
+      }
+
+      .img-content {
+        display: block;
+        padding: 1rem 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="container">
+      <div class="grid">
+        <div class="column-xs-12 column-md-10">
+          <p id="highlight">River & Shelly Wedding Photos</p>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="gallery">
+    <div class="container">
+      <div class="grid">
+        <div class="column-xs-12 column-md-4">
+          <figure class="img-container">
+            <img src="vertical_image/R6__0075.jpg" />
+          </figure>
+        </div>
+        <div class="column-xs-12 column-md-4">
+          <figure class="img-container">
+            <img src="vertical_image/R6__0008.jpg" />
+          </figure>
+        </div>
+        <div class="column-xs-12 column-md-4">
+          <figure class="img-container">
+            <img src="vertical_image/R6__0083.jpg">
+          </figure>
+        </div>
+        <!-- 2 -->
+        <div class="column-xs-12 column-md-8">
+          <figure class="img-container horizon">
+            <img class="horizon_image_style" src="horizon_image/R6__0042.jpg" />
+          </figure>
+        </div>
+        <div class="column-xs-12 column-md-4">
+          <figure class="img-container horizon">
+            <img class="horizon_image_style" src="horizon_image/R6__0611.jpg" />
+          </figure>
+        </div>
+        <!-- 3 -->
+        <div class="column-xs-12 column-md-4">
+          <figure class="img-container">
+            <img src="vertical_image/R6__0126.jpg" />
+          </figure>
+        </div>
+        <div class="column-xs-12 column-md-8">
+          <figure class="img-container horizon">
+            <img class="horizon_image_style" src="horizon_image/R6__0093.jpg">
+          </figure>
+        </div>
+        <!-- 4 -->
+        <div class="column-xs-12 column-md-6">
+          <figure class="img-container h_700">
+            <img src="vertical_image/R6__0411.jpg" class="h_700_image"/>
+          </figure>
+        </div>
+        <div class="column-xs-12 column-md-6">
+          <figure class="img-container h_700">
+            <img src="vertical_image/R6__0486.jpg" class="h_700_image"/>
+          </figure>
+        </div>
+        <!-- 棕色婚紗 -->
+        <div class="column-xs-12">
+          <figure class="img-container horizon" >
+            <img class="horizon_image_style" src="horizon_image/R6__0973.jpg" />
+          </figure>
+        </div>
+        <!-- 2 -->
+        <div class="column-xs-12 column-md-4" >
+          <figure class="img-container">
+            <img src="vertical_image/R6__0997.jpg"/>
+          </figure>
+        </div>
+        <div class="column-xs-12 column-md-8">
+          <figure class="img-container horizon">
+            <img class="horizon_image_style" src="horizon_image/R6__1149.jpg"/>
+          </figure>
+        </div>
+        <!-- 3 -->
+        <div class="column-xs-12 column-md-3">
+          <figure class="img-container">
+            <img src="vertical_image/R6__1888.jpg" />
+          </figure>
+        </div>
+        <div class="column-xs-12 column-md-6">
+          <figure class="img-container horizon">
+            <img class="horizon_image_style" src="horizon_image/R6__1648.jpg" />
+          </figure>
+        </div>
+        <div class="column-xs-12 column-md-3">
+          <figure class="img-container">
+            <img src="vertical_image/R6__1945.jpg">
+          </figure>
+        </div>
+        <!-- 4 -->
+        <div class="column-xs-12 column-md-4">
+          <figure class="img-container h_650">
+            <img src="vertical_image/R6__1530.jpg" class="h_650_image" />
+          </figure>
+        </div>
+        <div class="column-xs-12 column-md-4">
+          <figure class="img-container h_650">
+            <img src="vertical_image/R6__1639.jpg" class="h_650_image">
+          </figure>
+        </div>
+        <div class="column-xs-12 column-md-4">
+          <figure class="img-container h_650">
+            <img src="vertical_image/R6__1654.jpg" class="h_650_image">
+          </figure>
+        </div>
+        <!-- 4 -->
+        <div class="column-xs-12 column-md-8">
+          <figure class="img-container horizon h_400">
+            <img class="horizon_image_style h_400" src="horizon_image/R6__1871.jpg"  />
+          </figure>
+        </div>
+        <div class="column-xs-12 column-md-4">
+          <figure class="img-container horizon h_400">
+            <img class="horizon_image_style h_400" src="horizon_image/R6__1963.jpg" />
+          </figure>
+        </div>
+        <!-- 5 -->
+        <div class="column-xs-12">
+          <figure class="img-container horizon h_700">
+            <img class="horizon_image_style h_700_image" src="horizon_image/R6__1798.jpg"/>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
