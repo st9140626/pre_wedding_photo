@@ -3,34 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>River & Shelly Pre-Wedding Photography</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <style>
-    @import url("https://fonts.googleapis.com/css?family=Barlow:400,500,700");
-    .container {
-      margin: auto;
-      padding: 0 .5rem;
-      max-width: 71.25rem;
-      width: 100%;
-    }
-
-    .grid {
-      display: flex;
-      flex-direction: column;
-      flex-flow: row wrap;
-    }
-    .grid > [class*=column-] {
-      display: block;
-    }
-
-    .first {
-      order: -1;
-    }
-
-    .last {
-      order: 12;
-    }
-
+    @import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap');
     .align-top {
       align-items: start;
     }
@@ -43,504 +21,6 @@
       align-items: end;
     }
 
-    .column-xs-1 {
-      flex-basis: 8.3333333333%;
-      max-width: 8.3333333333%;
-    }
-
-    .column-xs-2 {
-      flex-basis: 16.6666666667%;
-      max-width: 16.6666666667%;
-    }
-
-    .column-xs-3 {
-      flex-basis: 25%;
-      max-width: 25%;
-    }
-
-    .column-xs-4 {
-      flex-basis: 33.3333333333%;
-      max-width: 33.3333333333%;
-    }
-
-    .column-xs-5 {
-      flex-basis: 41.6666666667%;
-      max-width: 41.6666666667%;
-    }
-
-    .column-xs-6 {
-      flex-basis: 50%;
-      max-width: 50%;
-    }
-
-    .column-xs-7 {
-      flex-basis: 58.3333333333%;
-      max-width: 58.3333333333%;
-    }
-
-    .column-xs-8 {
-      flex-basis: 66.6666666667%;
-      max-width: 66.6666666667%;
-    }
-
-    .column-xs-9 {
-      flex-basis: 75%;
-      max-width: 75%;
-    }
-
-    .column-xs-10 {
-      flex-basis: 83.3333333333%;
-      max-width: 83.3333333333%;
-    }
-
-    .column-xs-11 {
-      flex-basis: 91.6666666667%;
-      max-width: 91.6666666667%;
-    }
-
-    .column-xs-12 {
-      flex-basis: 100%;
-      max-width: 100%;
-    }
-
-    @media (min-width: 48rem) {
-      .column-sm-1 {
-        flex-basis: 8.3333333333%;
-        max-width: 8.3333333333%;
-      }
-
-      .column-sm-2 {
-        flex-basis: 16.6666666667%;
-        max-width: 16.6666666667%;
-      }
-
-      .column-sm-3 {
-        flex-basis: 25%;
-        max-width: 25%;
-      }
-
-      .column-sm-4 {
-        flex-basis: 33.3333333333%;
-        max-width: 33.3333333333%;
-      }
-
-      .column-sm-5 {
-        flex-basis: 41.6666666667%;
-        max-width: 41.6666666667%;
-      }
-
-      .column-sm-6 {
-        flex-basis: 50%;
-        max-width: 50%;
-      }
-
-      .column-sm-7 {
-        flex-basis: 58.3333333333%;
-        max-width: 58.3333333333%;
-      }
-
-      .column-sm-8 {
-        flex-basis: 66.6666666667%;
-        max-width: 66.6666666667%;
-      }
-
-      .column-sm-9 {
-        flex-basis: 75%;
-        max-width: 75%;
-      }
-
-      .column-sm-10 {
-        flex-basis: 83.3333333333%;
-        max-width: 83.3333333333%;
-      }
-
-      .column-sm-11 {
-        flex-basis: 91.6666666667%;
-        max-width: 91.6666666667%;
-      }
-
-      .column-sm-12 {
-        flex-basis: 100%;
-        max-width: 100%;
-      }
-    }
-    @media (min-width: 62rem) {
-      .column-md-1 {
-        flex-basis: 8.3333333333%;
-        max-width: 8.3333333333%;
-      }
-
-      .column-md-2 {
-        flex-basis: 16.6666666667%;
-        max-width: 16.6666666667%;
-      }
-
-      .column-md-3 {
-        flex-basis: 25%;
-        max-width: 25%;
-      }
-
-      .column-md-4 {
-        flex-basis: 33.3333333333%;
-        max-width: 33.3333333333%;
-      }
-
-      .column-md-5 {
-        flex-basis: 41.6666666667%;
-        max-width: 41.6666666667%;
-      }
-
-      .column-md-6 {
-        flex-basis: 50%;
-        max-width: 50%;
-      }
-
-      .column-md-7 {
-        flex-basis: 58.3333333333%;
-        max-width: 58.3333333333%;
-      }
-
-      .column-md-8 {
-        flex-basis: 66.6666666667%;
-        max-width: 66.6666666667%;
-      }
-
-      .column-md-9 {
-        flex-basis: 75%;
-        max-width: 75%;
-      }
-
-      .column-md-10 {
-        flex-basis: 83.3333333333%;
-        max-width: 83.3333333333%;
-      }
-
-      .column-md-11 {
-        flex-basis: 91.6666666667%;
-        max-width: 91.6666666667%;
-      }
-
-      .column-md-12 {
-        flex-basis: 100%;
-        max-width: 100%;
-      }
-    }
-    @media (min-width: 75rem) {
-      .column-lg-1 {
-        flex-basis: 8.3333333333%;
-        max-width: 8.3333333333%;
-      }
-
-      .column-lg-2 {
-        flex-basis: 16.6666666667%;
-        max-width: 16.6666666667%;
-      }
-
-      .column-lg-3 {
-        flex-basis: 25%;
-        max-width: 25%;
-      }
-
-      .column-lg-4 {
-        flex-basis: 33.3333333333%;
-        max-width: 33.3333333333%;
-      }
-
-      .column-lg-5 {
-        flex-basis: 41.6666666667%;
-        max-width: 41.6666666667%;
-      }
-
-      .column-lg-6 {
-        flex-basis: 50%;
-        max-width: 50%;
-      }
-
-      .column-lg-7 {
-        flex-basis: 58.3333333333%;
-        max-width: 58.3333333333%;
-      }
-
-      .column-lg-8 {
-        flex-basis: 66.6666666667%;
-        max-width: 66.6666666667%;
-      }
-
-      .column-lg-9 {
-        flex-basis: 75%;
-        max-width: 75%;
-      }
-
-      .column-lg-10 {
-        flex-basis: 83.3333333333%;
-        max-width: 83.3333333333%;
-      }
-
-      .column-lg-11 {
-        flex-basis: 91.6666666667%;
-        max-width: 91.6666666667%;
-      }
-
-      .column-lg-12 {
-        flex-basis: 100%;
-        max-width: 100%;
-      }
-    }
-    @supports (display: grid) {
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: auto;
-      }
-      .grid > [class*=column-] {
-        margin: 0;
-        max-width: 100%;
-      }
-
-      .column-xs-1 {
-        grid-column-start: span 1;
-        grid-column-end: span 1;
-      }
-
-      .column-xs-2 {
-        grid-column-start: span 2;
-        grid-column-end: span 2;
-      }
-
-      .column-xs-3 {
-        grid-column-start: span 3;
-        grid-column-end: span 3;
-      }
-
-      .column-xs-4 {
-        grid-column-start: span 4;
-        grid-column-end: span 4;
-      }
-
-      .column-xs-5 {
-        grid-column-start: span 5;
-        grid-column-end: span 5;
-      }
-
-      .column-xs-6 {
-        grid-column-start: span 6;
-        grid-column-end: span 6;
-      }
-
-      .column-xs-7 {
-        grid-column-start: span 7;
-        grid-column-end: span 7;
-      }
-
-      .column-xs-8 {
-        grid-column-start: span 8;
-        grid-column-end: span 8;
-      }
-
-      .column-xs-9 {
-        grid-column-start: span 9;
-        grid-column-end: span 9;
-      }
-
-      .column-xs-10 {
-        grid-column-start: span 10;
-        grid-column-end: span 10;
-      }
-
-      .column-xs-11 {
-        grid-column-start: span 11;
-        grid-column-end: span 11;
-      }
-
-      .column-xs-12 {
-        grid-column-start: span 12;
-        grid-column-end: span 12;
-      }
-
-      @media (min-width: 48rem) {
-        .column-sm-1 {
-          grid-column-start: span 1;
-          grid-column-end: span 1;
-        }
-
-        .column-sm-2 {
-          grid-column-start: span 2;
-          grid-column-end: span 2;
-        }
-
-        .column-sm-3 {
-          grid-column-start: span 3;
-          grid-column-end: span 3;
-        }
-
-        .column-sm-4 {
-          grid-column-start: span 4;
-          grid-column-end: span 4;
-        }
-
-        .column-sm-5 {
-          grid-column-start: span 5;
-          grid-column-end: span 5;
-        }
-
-        .column-sm-6 {
-          grid-column-start: span 6;
-          grid-column-end: span 6;
-        }
-
-        .column-sm-7 {
-          grid-column-start: span 7;
-          grid-column-end: span 7;
-        }
-
-        .column-sm-8 {
-          grid-column-start: span 8;
-          grid-column-end: span 8;
-        }
-
-        .column-sm-9 {
-          grid-column-start: span 9;
-          grid-column-end: span 9;
-        }
-
-        .column-sm-10 {
-          grid-column-start: span 10;
-          grid-column-end: span 10;
-        }
-
-        .column-sm-11 {
-          grid-column-start: span 11;
-          grid-column-end: span 11;
-        }
-
-        .column-sm-12 {
-          grid-column-start: span 12;
-          grid-column-end: span 12;
-        }
-      }
-      @media (min-width: 62rem) {
-        .column-md-1 {
-          grid-column-start: span 1;
-          grid-column-end: span 1;
-        }
-
-        .column-md-2 {
-          grid-column-start: span 2;
-          grid-column-end: span 2;
-        }
-
-        .column-md-3 {
-          grid-column-start: span 3;
-          grid-column-end: span 3;
-        }
-
-        .column-md-4 {
-          grid-column-start: span 4;
-          grid-column-end: span 4;
-        }
-
-        .column-md-5 {
-          grid-column-start: span 5;
-          grid-column-end: span 5;
-        }
-
-        .column-md-6 {
-          grid-column-start: span 6;
-          grid-column-end: span 6;
-        }
-
-        .column-md-7 {
-          grid-column-start: span 7;
-          grid-column-end: span 7;
-        }
-
-        .column-md-8 {
-          grid-column-start: span 8;
-          grid-column-end: span 8;
-        }
-
-        .column-md-9 {
-          grid-column-start: span 9;
-          grid-column-end: span 9;
-        }
-
-        .column-md-10 {
-          grid-column-start: span 10;
-          grid-column-end: span 10;
-        }
-
-        .column-md-11 {
-          grid-column-start: span 11;
-          grid-column-end: span 11;
-        }
-
-        .column-md-12 {
-          grid-column-start: span 12;
-          grid-column-end: span 12;
-        }
-      }
-      @media (min-width: 75rem) {
-        .column-lg-1 {
-          grid-column-start: span 1;
-          grid-column-end: span 1;
-        }
-
-        .column-lg-2 {
-          grid-column-start: span 2;
-          grid-column-end: span 2;
-        }
-
-        .column-lg-3 {
-          grid-column-start: span 3;
-          grid-column-end: span 3;
-        }
-
-        .column-lg-4 {
-          grid-column-start: span 4;
-          grid-column-end: span 4;
-        }
-
-        .column-lg-5 {
-          grid-column-start: span 5;
-          grid-column-end: span 5;
-        }
-
-        .column-lg-6 {
-          grid-column-start: span 6;
-          grid-column-end: span 6;
-        }
-
-        .column-lg-7 {
-          grid-column-start: span 7;
-          grid-column-end: span 7;
-        }
-
-        .column-lg-8 {
-          grid-column-start: span 8;
-          grid-column-end: span 8;
-        }
-
-        .column-lg-9 {
-          grid-column-start: span 9;
-          grid-column-end: span 9;
-        }
-
-        .column-lg-10 {
-          grid-column-start: span 10;
-          grid-column-end: span 10;
-        }
-
-        .column-lg-11 {
-          grid-column-start: span 11;
-          grid-column-end: span 11;
-        }
-
-        .column-lg-12 {
-          grid-column-start: span 12;
-          grid-column-end: span 12;
-        }
-      }
-    }
     * {
       box-sizing: border-box;
     }
@@ -549,7 +29,7 @@
     }
 
     body {
-      font-family: "Barlow", sans-serif;
+      font-family: 'Edu TAS Beginner', cursive;
       font-size: 1.125rem;
       line-height: 1.5;
       color: #787878;
@@ -573,6 +53,12 @@
       color: #2e2e2e;
     }
 
+    .row {
+      margin-bottom: 1.5rem;
+    }
+    .row:last-child {
+      margin-bottom: 0;
+    }
     nav {
       padding: 2.5rem 0 2.5rem 0;
     }
@@ -589,11 +75,12 @@
 
     #highlight {
       color: #ea8478;
-      font-size: 1.25rem;
+      padding-left: 6rem;
+      line-height: 4.5rem;
     }
 
     .gallery {
-      padding: 0 0 1rem 0;
+      padding: 0 1rem 1.5rem 1rem;
     }
 
     .img-container {
@@ -611,7 +98,7 @@
       width: 100%;
       height: 500px;
       -o-object-fit: cover;
-        object-fit: cover;
+      object-fit: cover;
       transform: scale(1);
       transition: all 0.3s ease-in-out;
     }
@@ -661,11 +148,6 @@
       height: 400px;
     }
     
-    @supports (display: grid) {
-      .gallery .grid {
-        grid-gap: 1rem;
-      }
-    }
     @media (min-width: 62rem) {
       nav ul {
         justify-content: flex-end;
@@ -673,17 +155,19 @@
     }
     @media (max-width: 1440px) {
       img.middle_screen_height {
-        min-height: 780px;
+        min-height: 640pxx;
       }
     }
     @media (max-width: 1024px) {
-      img:hover {
-        transform: none;
-      }
-
       .img-container {
         margin: 0%;
         height: 100%;
+      }
+      .row > div {
+        margin-bottom: 1.5rem;
+      }
+      .row > div:last-child {
+        margin-bottom: 0;
       }
       .img-container.horizon > img {
         height: auto;
@@ -702,17 +186,17 @@
 
 <body>
   <nav>
-    <div class="container">
-      <div class="grid">
-        <div class="column-xs-12 column-md-10">
-          <p id="highlight">River & Shelly Pre-Wedding Photography</p>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 pl-3">
+          <p class="h2" id="highlight">River & Shelly<br/>Pre-Wedding Photography</p>
         </div>
       </div>
     </div>
   </nav>
   <section class="gallery">
-    <div class="container">
-      <div class="grid">
+    <div class="container-fluid">
+      <div class="row">
         <div class="column-xs-12 column-md-4">
           <figure class="img-container">
             <img src="vertical_image/R6__0075.jpg" class="middle_screen_height" />
@@ -728,7 +212,9 @@
             <img src="vertical_image/R6__0083.jpg" class="middle_screen_height">
           </figure>
         </div>
-        <!-- 2 -->
+      </div>
+      <!-- 2 -->
+      <div class="row">
         <div class="column-xs-12 column-md-8">
           <figure class="img-container horizon">
             <img class="horizon_image_style" src="horizon_image/R6__0042.jpg" />
@@ -739,7 +225,9 @@
             <img class="horizon_image_style" src="horizon_image/R6__0611.jpg" />
           </figure>
         </div>
-        <!-- 3 -->
+      </div>
+      <!-- 3 -->
+      <div class="row">
         <div class="column-xs-12 column-md-4">
           <figure class="img-container">
             <img src="vertical_image/R6__0126.jpg" class="middle_screen_height"/>
@@ -750,7 +238,9 @@
             <img class="horizon_image_style" src="horizon_image/R6__0093.jpg">
           </figure>
         </div>
-        <!-- 4 -->
+      </div>
+      <!-- 4 -->
+      <div class="row">
         <div class="column-xs-12 column-md-6">
           <figure class="img-container h_700">
             <img src="vertical_image/R6__0411.jpg" class="h_700_image middle_screen_height"/>
@@ -761,13 +251,17 @@
             <img src="vertical_image/R6__0486.jpg" class="h_700_image middle_screen_height"/>
           </figure>
         </div>
-        <!-- 棕色婚紗 -->
+      </div>
+      <!-- 棕色婚紗 -->
+      <div class="row">
         <div class="column-xs-12">
           <figure class="img-container horizon" >
             <img class="horizon_image_style" src="horizon_image/R6__0973.jpg" />
           </figure>
         </div>
-        <!-- 2 -->
+      </div>
+      <!-- 2 -->
+      <div class="row">
         <div class="column-xs-12 column-md-4" >
           <figure class="img-container">
             <img src="vertical_image/R6__0997.jpg" class="middle_screen_height"/>
@@ -778,7 +272,9 @@
             <img class="horizon_image_style" src="horizon_image/R6__1149.jpg"/>
           </figure>
         </div>
-        <!-- 3 -->
+      </div>
+      <!-- 3 -->
+      <div class="row">
         <div class="column-xs-12 column-md-3">
           <figure class="img-container">
             <img src="vertical_image/R6__1888.jpg" class="middle_screen_height" />
@@ -794,7 +290,9 @@
             <img src="vertical_image/R6__1945.jpg" class="middle_screen_height">
           </figure>
         </div>
-        <!-- 4 -->
+      </div>
+      <!-- 4 -->
+      <div class="row">
         <div class="column-xs-12 column-md-4">
           <figure class="img-container h_650">
             <img src="vertical_image/R6__1530.jpg" class="h_650_image middle_screen_height" />
@@ -810,7 +308,9 @@
             <img src="vertical_image/R6__1654.jpg" class="h_650_image middle_screen_height">
           </figure>
         </div>
-        <!-- 4 -->
+      </div>
+      <!-- 4 -->
+      <div class="row">
         <div class="column-xs-12 column-md-8">
           <figure class="img-container horizon h_400">
             <img class="horizon_image_style h_400" src="horizon_image/R6__1871.jpg"  />
@@ -821,7 +321,9 @@
             <img class="horizon_image_style h_400" src="horizon_image/R6__1963.jpg" />
           </figure>
         </div>
-        <!-- 5 -->
+      </div>
+      <!-- 5 -->
+      <div class="row">
         <div class="column-xs-12">
           <figure class="img-container horizon h_700">
             <img class="horizon_image_style h_700_image" src="horizon_image/R6__1798.jpg"/>
